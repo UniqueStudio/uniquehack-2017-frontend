@@ -1,0 +1,45 @@
+.nav {
+  z-index: 6;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+  transition: all .2s;
+}
+.logo {
+  display: inline-block;
+  float: left;
+}
+.nav.with-bgc {
+  background-color: rgba(0, 0, 0, .5);
+}
+.links {
+  float: right;
+}
+.link-wrap {
+  display: inline-block;
+  margin: .5em 0;
+}
+.link-active a {
+  border-bottom: 2px solid blanchedalmond;
+}
+.link-inactive a {
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+.link-wrap a {
+  transition: all .2s;
+  text-decoration: none;
+  margin: .8em;
+  padding: .2em;
+  line-height: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: white;
+}
+.nav.without-bgc {
+}
+
+.nav img {
+  width: 60px;
+}

@@ -1,0 +1,44 @@
+.schedule {
+  background-color: #faf9f9;
+}
+.single-day-schedule {
+  max-width: 700px;
+  margin: 1em auto;
+  width: 90%;
+}
+.single-day-schedule h3 {
+  text-align: left;
+  font-size: 1em;
+  font-weight: 700;
+  margin: 1em;
+}
+.schedule-event {
+  box-sizing: border-box;
+  float: left;
+  padding: .4em;
+  transition: all .2s;
+  border: 2px solid rgba(0, 0, 0, 0);
+  height: 140px;
+  width: 100%;
+}
+@media screen and (min-width: 740px) {
+  .schedule-event {
+    width: 33.3%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .schedule-event {
+    width: 20%;
+  }
+}
+.schedule-event:hover {
+  color: #fd9934;
+  border: 2px solid #3d3d3d;
+  z-index: 5;
+}
+.schedule-event:nth-child(2n) {
+  background-color: #faf9f9;
+}
+.schedule-event:nth-child(2n+1) {
+  background-color: #fff;
+}

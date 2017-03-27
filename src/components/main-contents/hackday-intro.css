@@ -1,0 +1,28 @@
+.hackday-intro {
+  background-color: #f1f0f0;
+  color: #3d3d3d;
+}
+.paragraph {
+  max-width: 700px;
+  margin: 1em auto;
+  width: 90%;
+}
+
+.hackday-intro a {
+  background-color: #f1f0f0;
+  border-radius: 4px;
+  border: 1px solid #3d3d3d;
+  color: #3d3d3d;
+  text-align: center;
+  display: block;
+  font-size: 1.2em;
+  margin: 2em auto;
+  line-height: 2em;
+  width: 8em;
+  text-decoration: none;
+  transition: all .1s;
+}
+.hackday-intro a:hover {
+  color: #f1f0f0;
+  background-color: #3d3d3d;
+}
