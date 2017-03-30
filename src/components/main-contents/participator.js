@@ -8,7 +8,9 @@ class Participator extends Component {
         <div
           key={part.title}
           className="sub-participator">
-          <h3>{part.title}</h3>
+          <h3 style={{
+              backgroundImage: 'url(/' + part.title + ')'
+          }} />
           <p>{part.content}</p>
         </div>
       )

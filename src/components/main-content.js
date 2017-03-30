@@ -43,11 +43,11 @@ class mainContent extends Component {
           title="参赛对象"
           subParts={[
             {
-              title: 'hackday',
+              title: 'hackday.png',
               content: 'Unique Hackday面向于全国高校本科生，其中包括编程爱好者、产品经理、交互设计师及任何有技术基础的同学，在所有的报名者中筛选出最优秀的150名参赛者来参加比赛。'
             },
             {
-              title: 'talk',
+              title: 'talk.png',
               content: '而Unique Talk 的报名，采取自愿参加的形式，面向有一定项目基础、创业经历的同学，除此之外还邀请全国各类高校技术组织，并在所有的报名者中筛选50名同学参加。'
             }
           ]}

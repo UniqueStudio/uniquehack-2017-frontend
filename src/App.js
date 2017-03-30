@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './logo.jpg';
 import Nav from './components/nav';
 import Homepage from './components/homepage';
 import MainContent from './components/main-content';
