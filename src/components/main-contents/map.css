@@ -11,8 +11,12 @@
 }
 .map p {
   max-width: 700px;
-  /*font-size: ;*/
+  font-size: 16px;
+  font-weight: 600;
+  color: #32cdff;
   text-align: center;
-  margin: .3em auto;
+  margin: .8em auto;
   width: 90%;
+}
+.map-description-zh {
 }

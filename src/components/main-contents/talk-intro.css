@@ -1,4 +1,5 @@
 .talk-intro {
+  padding-top: 100px;
   background-color: #faf9f9;
 }
 .talk-wrap-mid {
@@ -37,8 +38,8 @@
 .talk-wrap-in {
   pointer-events: none;
   position: absolute;
-  left: -3%;
-  top: -3%;
+  left: -32px;
+  top: -32px;
   width: 100%;
   height: 100%;
   border: 2px solid #3d3d3d;
@@ -47,8 +48,8 @@
 .talk-wrap-out {
   pointer-events: none;
   position: absolute;
-  left: 3%;
-  top: 3%;
+  left: -16px;
+  top: -16px;
   width: 100%;
   height: 100%;
   border: 2px solid #3d3d3d;
