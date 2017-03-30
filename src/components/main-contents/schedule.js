@@ -16,7 +16,11 @@ class Schedule extends Component {
         <div
           key={index}
           className="single-day-schedule">
-          <h3>{schedule.time}</h3>
+          <div className="schedule-time">
+            <p>
+              {schedule.time}
+            </p>
+          </div>
           {events}
           <div className="clear-float" />
         </div>
