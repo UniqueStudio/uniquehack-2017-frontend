@@ -42,7 +42,7 @@ const sketch = function(p) {
     p.blendMode(p.BLEND);
     // background(8, 24, 64);
     // Add to that scanline look, allows some frames to combine.
-    p.fill(8, 2, 24, 200 + p.cos(p.frameCount / 10) * 100);
+    p.fill(8, 2, 24);
     p.rect(0, 0, p.width, p.height);
 
     // Text prep
@@ -69,12 +69,8 @@ const sketch = function(p) {
           ...(rando > 0.92 ? accents : [])
         ]);
       });
-    let dotCount = 3;
-    let dotTime = (dotCount + 1) * 30;
-    let dotTimeSpan = (dotCount + 2) * 30;
-    let repeat = p.map(p.frameCount % dotTimeSpan, 0, dotTime, 0, dotCount + 1);
-    txt += ('.'.repeat(p.abs(p.floor(repeat))) + '   ').slice(0, 3);
 
+    // console.log(txt)
     let h = p.textSize();
     let w = p.textWidth(txt);
 
@@ -83,25 +79,15 @@ const sketch = function(p) {
     let xOffset = 0;
     let yOffset = p.height / 2 - h / 2;
 
-    p.fill(255, 0.99);
-
-    // Scanline
-    let barHeight = part * 0.995;
-    let barCount = p.round(p.height / barHeight);
-    for(let i = 0; i < barCount; i++) {
-      p.rect(
-        0, i / barCount,
-        p.width, barHeight * i
-      );
-    }
-
     p.blendMode(p.ADD);
 
     p.fill(255);
 
     p.translate(
-      p.round(p.cos(p.sin(p.frameCount / 10) * p.TAU - p.cos(p.tan(p.frameCount / 4) / 10) * p.TAU)) * 8,
-      p.round(p.sin(p.frameCount) * 16 / 8) * 0.4
+      // p.round(p.cos(p.sin(p.frameCount / 10) * p.TAU - p.cos(p.tan(p.frameCount / 4) / 10) * p.TAU)) * 8,
+      // p.round(p.sin(p.frameCount) * 16 / 8) * 0.4
+      0,
+      Math.round(Math.sin(p.frameCount))
     );
 
     p.text(txt, p.width / 2, p.height / 2);
@@ -128,31 +114,31 @@ const sketch = function(p) {
       canvas.drawingContext.restore();
     }
 
-    p.fill(255, 2);
-    for(let i = 0; i < 4; i++) {
-      p.rect(0, (p.frameCount * (30 + i)) % p.height / 6 * 7, p.width, p.height / 9);
-    }
-    p.fill(255, p.random(8, 12));
-    let rounding = (part * 1.2);
-    let travelingBarHeight = p.height / 6;
-    let travelingBarSpeed = p.frameCount * 2;
-    p.rect(
-      0, p.round(travelingBarSpeed % travelingBarHeight * 8 / rounding) * rounding - travelingBarHeight,
-      p.width, travelingBarHeight
-    );
-    let travelingBarY2 = p.round(
-        (travelingBarSpeed + 6) % travelingBarHeight * 8 / rounding
-      ) * rounding - travelingBarHeight;
-    let travelingBar2Opacity = p.map(
-      travelingBarY2,
-      ...(travelingBarY2 < p.height / 2 ? [ 0, p.height / 2 ] : [ p.height / 2, p.height ]),
-      0, 1
-    );
-    p.fill(255, p.random(8, 12) * travelingBar2Opacity);
-    p.rect(
-      0, travelingBarY2,
-      p.width, travelingBarHeight
-    );
+    // p.fill(255, 2);
+    // for(let i = 0; i < 4; i++) {
+    //   p.rect(0, (p.frameCount * (30 + i)) % p.height / 6 * 7, p.width, p.height / 9);
+    // }
+    // p.fill(255, p.random(8, 12));
+    // let rounding = (part * 1.2);
+    // let travelingBarHeight = p.height / 6;
+    // let travelingBarSpeed = p.frameCount * 2;
+    // p.rect(
+    //   0, p.round(travelingBarSpeed % travelingBarHeight * 8 / rounding) * rounding - travelingBarHeight,
+    //   p.width, travelingBarHeight
+    // );
+    // let travelingBarY2 = p.round(
+    //     (travelingBarSpeed + 6) % travelingBarHeight * 8 / rounding
+    //   ) * rounding - travelingBarHeight;
+    // let travelingBar2Opacity = p.map(
+    //   travelingBarY2,
+    //   ...(travelingBarY2 < p.height / 2 ? [ 0, p.height / 2 ] : [ p.height / 2, p.height ]),
+    //   0, 1
+    // );
+    // p.fill(255, p.random(8, 12) * travelingBar2Opacity);
+    // p.rect(
+    //   0, travelingBarY2,
+    //   p.width, travelingBarHeight
+    // );
   };
   p.windowResized = () => {
     p.resizeCanvas(window.innerWidth, window.innerHeight);
