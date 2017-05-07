@@ -45,9 +45,9 @@
   -moz-background-size: 100% 3px;
   background-size: 100% 3px;
   background-image: linear-gradient(to right, #00d6fa 0%, #9caa71 100%), linear-gradient(to right, #9caa71 0%, #ff7200 100%);
-  background-image: -webkit-linear-gradient(to right, #00d6fa 0%, #9caa71 100%), -webkit-linear-gradient(to right, #9caa71 0%, #ff7200 100%);
-  background-image: -moz-linear-gradient(to right, #00d6fa 0%, #9caa71 100%), -moz-linear-gradient(to right, #9caa71 0%, #ff7200 100%);
-  background-image: -o-linear-gradient(to right, #00d6fa 0%, #9caa71 100%), -o-linear-gradient(to right, #9caa71 0%, #ff7200 100%);
+  background-image: -webkit-linear-gradient(left, #00d6fa 0%, #9caa71 100%), -webkit-linear-gradient(left, #9caa71 0%, #ff7200 100%);
+  background-image: -moz-linear-gradient(right, #00d6fa 0%, #9caa71 100%), -moz-linear-gradient(right, #9caa71 0%, #ff7200 100%);
+  background-image: -o-linear-gradient(right, #00d6fa 0%, #9caa71 100%), -o-linear-gradient(right, #9caa71 0%, #ff7200 100%);
 }
 .schedule-time:after {
   background-position: 0 0, 100% 0;
@@ -56,9 +56,9 @@
   -moz-background-size: 3px 100%;
   background-size: 3px 100%;
   background-image: linear-gradient(to bottom, #00d6fa 0%, #9caa71 100%), linear-gradient(to bottom, #9caa71 0%, #ff7200 100%);
-  background-image: -webkit-linear-gradient(to bottom, #00d6fa 0%, #9caa71 100%), -webkit-linear-gradient(to bottom, #9caa71 0%, #ff7200 100%);
-  background-image: -moz-linear-gradient(to bottom, #00d6fa 0%, #9caa71 100%), -moz-linear-gradient(to bottom, #9caa71 0%, #ff7200 100%);
-  background-image: -o-linear-gradient(to bottom, #00d6fa 0%, #9caa71 100%), -o-linear-gradient(to bottom, #9caa71 0%, #ff7200 100%);
+  background-image: -webkit-linear-gradient(top, #00d6fa 0%, #9caa71 100%), -webkit-linear-gradient(top, #9caa71 0%, #ff7200 100%);
+  background-image: -moz-linear-gradient(bottom, #00d6fa 0%, #9caa71 100%), -moz-linear-gradient(bottom, #9caa71 0%, #ff7200 100%);
+  background-image: -o-linear-gradient(bottom, #00d6fa 0%, #9caa71 100%), -o-linear-gradient(bottom, #9caa71 0%, #ff7200 100%);
 }
 .schedule-event {
   box-sizing: border-box;

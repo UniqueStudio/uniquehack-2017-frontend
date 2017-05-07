@@ -22,14 +22,14 @@
   padding: 42px 0;
   border-top: 1px solid #d0d0d0;
 }
-.sub-participator h3 {
-  margin: 42px auto;
+.sub-image-wrap {
+  display: block;
+  margin: 0 auto;
   text-align: center;
-  font-size: 2em;
-  font-weight: 400;
-  height: 1em;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  justify-content: center;
+  height: 3em;
   width: 80%;
+}
+.sub-participator img {
+  display: inline-block;
 }

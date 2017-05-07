@@ -3,14 +3,14 @@ import './participator.css';
 
 class Participator extends Component {
   render() {
-    const subParts = this.props.subParts.map((part) => {
+    const subParts = this.props.subParts.map((part, index) => {
       return (
         <div
-          key={part.title}
+          key={index}
           className="sub-participator">
-          <h3 style={{
-              backgroundImage: 'url(/' + part.title + ')'
-          }} />
+          <div className="sub-image-wrap">
+            <img src={part.title.image} alt={part.title.alt} />
+          </div>
           <p>{part.content}</p>
         </div>
       )

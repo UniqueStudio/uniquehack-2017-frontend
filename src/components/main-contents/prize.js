@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './prize.css';
+import PrizeBg from '../../asserts/prize-bg.png'
 
 class Prize extends Component {
   render() {
@@ -9,9 +10,13 @@ class Prize extends Component {
         <p className='prize-content'>{prize.content}</p>
       </div>
     ));
+    const bgStyle = {
+      background: 'url(' + PrizeBg + ')'
+    };
     return (
       <section
         id="prize"
+        style={bgStyle}
         className="prize">
         <h2>{this.props.title}</h2>
         <div className="prize-left">
