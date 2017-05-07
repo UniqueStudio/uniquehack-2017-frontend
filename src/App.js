@@ -110,14 +110,13 @@ class App extends Component {
             }
           }}
           onTouchMove={(e) => {
-            this.scrollTop = e.target.scrollTop
+            this.scrollTop = e.target.scrollTop;
             this.setState({
               activeTab: this.findActiveTab()
             });
           }}
           onScroll={(e) => {
-            console.log(e)
-            this.scrollTop = e.target.scrollTop
+            this.scrollTop = e.target.scrollTop;
             this.setState({
               activeTab: this.findActiveTab()
             });
