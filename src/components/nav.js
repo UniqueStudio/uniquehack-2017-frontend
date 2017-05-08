@@ -7,7 +7,7 @@ class Nav extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hidden: false
+      hidden: true
     };
   }
   render() {
@@ -25,6 +25,7 @@ class Nav extends Component {
         (this.props.activeTab === link.link ?
           'active' : 'inactive')}>
           <a
+            className="link-a"
             href={link.link}>
             {link.name}
           </a>
@@ -41,17 +42,22 @@ class Nav extends Component {
         <img className="logo" src={this.props.logo} />
         <div
           className="link-wrap nav-close"
+          onTouchEnd={() => {
+            const hiddenState = !this.state.hidden;
+            this.setState({
+              hidden: hiddenState
+            });
+          }}
           onClick={() => {
             const hiddenState = !this.state.hidden;
             this.setState({
               hidden: hiddenState
             });
           }}>
-            {this.state.hidden ?
-              <img src={Menu} alt="show"/>
-              :
-              <img src={Close} alt="close"/>
-            }
+          <div className={
+            this.state.hidden ? 'hidden-circle': 'not-hidden-circle'
+          }>
+          </div>
         </div>
         <div className="links">
           {links}

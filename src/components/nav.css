@@ -12,17 +12,26 @@
   float: left;
 }
 .with-bgc {
-  background-color: rgba(0, 0, 0, .5);
+  background-color: #4d4d4d;
+  box-shadow: 2px 1px 3px grey;
 }
 .links, .nav-close {
   float: right;
 }
+.links {
+  height: auto;
+  width: 100%;
+}
 .link-wrap {
+  padding-bottom: 0;
   overflow: hidden;
   transition: all .2s;
-  display: inline-block;
-  padding-bottom: .3em;
-  margin: .5em 0;
+  margin: 6px 0;
+}
+.link {
+  padding-left: 1.2em;
+  display: block;
+  width: 100%;
 }
 .link-active a {
   border-bottom: 2px solid white;
@@ -30,28 +39,69 @@
 .link-inactive a {
   border-bottom: 2px solid rgba(0, 0, 0, 0);
 }
-.link-wrap a {
+.link-a {
   transition: all .2s;
   text-decoration: none;
-  margin: .8em;
-  padding: .2em .5em;
+  padding: 4px .5em;
   line-height: 40px;
   height: 40px;
   font-size: 20px;
   color: white;
+  display: inline-block;
 }
-.nav.without-bgc {
+.nav {
+  background-color: #4d4d4d;
+}
+@media screen and (min-width: 740px) {
+  .links {
+    height: 62px;
+    width: auto;
+  }
+  .link {
+    width: auto;
+    display: inline-block;
+  }
+  .link-a {
+    margin: 0 0;
+  }
+  .nav.without-bgc, .nav-hidden {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+@media screen and (min-width: 1000px) {
+  .link-a {
+    margin: 0 .8em;
+  }
 }
 
 .nav .logo {
-  width: 60px;
+  width: 62px;
 }
 .nav-hidden .link {
   height: 0;
 }
 .nav-hidden {
   background-color: rgba(0, 0, 0, 0);
+  box-shadow: 2px 1px 0 rgba(0, 0, 0 ,0);
 }
-.nav-close img {
+.nav-close {
+}
+.nav-close div {
+  margin: 10px 20px;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  border-radius: 15px;
+  border: 2px solid #d0d0d0;
+  transition: all .2s;
+}
+.nav-close div:hover {
+  background-color: #dcdcdc;
+}
+.hidden-circle {
   height: 40px;
+  width: 40px;
+}
+.not-hidden-circle {
+
 }

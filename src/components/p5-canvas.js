@@ -18,7 +18,7 @@ const sketch = function(p) {
     S: [ 5, '$' ],
     T: [ 7 ],
     X: [ '×' ],
-    Y: [ '¥' ]
+    Y: [ '¥' ],
   };
   const accentReplacement = {
     A: [ 'Ă', 'Â', 'ă', 'â' ],
@@ -49,7 +49,7 @@ const sketch = function(p) {
     // let life = p.random() > 0.6 ? 'LIFE' : 'LIFE'.split('').sort(() => p.round(p.random(-1, 1))).join('');
     // let txt = `UNIQUE x ${life}`
     // let txt = `UNIQUE x HACKDAY AND TALK`
-    let txt = `UNIQUE x HACKDAY AND TALK`
+    let txt = `UNIQUE x HACKDAY`
       .toUpperCase()
       .split('')
       .map(n => n[p.random(caseFunctions)]())
