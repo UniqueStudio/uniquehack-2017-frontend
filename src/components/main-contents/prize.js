@@ -4,8 +4,8 @@ import PrizeBg from '../../asserts/prize-bg.png'
 
 class Prize extends Component {
   render() {
-    const prizes = this.props.prizes.map((prize) => (
-      <div className='single-prize'>
+    const prizes = this.props.prizes.map((prize, index) => (
+      <div key={index} className='single-prize'>
         <p className='prize-name'>{prize.name}</p>
         <p className='prize-content'>{prize.content}</p>
       </div>

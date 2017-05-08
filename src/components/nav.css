@@ -11,13 +11,15 @@
   display: inline-block;
   float: left;
 }
-.nav.with-bgc {
+.with-bgc {
   background-color: rgba(0, 0, 0, .5);
 }
-.links {
+.links, .nav-close {
   float: right;
 }
 .link-wrap {
+  overflow: hidden;
+  transition: all .2s;
   display: inline-block;
   padding-bottom: .3em;
   margin: .5em 0;
@@ -41,6 +43,15 @@
 .nav.without-bgc {
 }
 
-.nav img {
+.nav .logo {
   width: 60px;
+}
+.nav-hidden .link {
+  height: 0;
+}
+.nav-hidden {
+  background-color: rgba(0, 0, 0, 0);
+}
+.nav-close img {
+  height: 40px;
 }

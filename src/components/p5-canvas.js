@@ -48,6 +48,7 @@ const sketch = function(p) {
     // Text prep
     // let life = p.random() > 0.6 ? 'LIFE' : 'LIFE'.split('').sort(() => p.round(p.random(-1, 1))).join('');
     // let txt = `UNIQUE x ${life}`
+    // let txt = `UNIQUE x HACKDAY AND TALK`
     let txt = `UNIQUE x HACKDAY AND TALK`
       .toUpperCase()
       .split('')
@@ -70,6 +71,8 @@ const sketch = function(p) {
         ]);
       });
 
+    const textSize = p.width / 15;
+    p.textSize(textSize);
     // console.log(txt)
     let h = p.textSize();
     let w = p.textWidth(txt);

@@ -22,7 +22,9 @@ class Questions extends Component {
         }}
         className={"question " + (this.state.open ? 'open' : 'close')}>
         <h3>{this.props.name}</h3>
-        <p>{this.props.content}</p>
+        {
+          this.props.content.map((content, index) => (<p key={index}>{content}</p>) )
+        }
         <div className="triangle-mark" />
       </div>
     );

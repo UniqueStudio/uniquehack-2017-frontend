@@ -1,10 +1,15 @@
 import React, {Component} from 'react';
+import './hosts.css';
 
 class Hosts extends Component {
   render() {
+    const contents = this.props.hosts.map((host, index) => {
+      return (<p key={index} className="paragraph">{host}</p>);
+    });
     return (
-      <section className="hosts">
+      <section id="host">
         <h2>{this.props.title}</h2>
+        {contents}
       </section>
     );
   }
@@ -12,7 +17,7 @@ class Hosts extends Component {
 
 Hosts.propTypes = {
   title: React.PropTypes.string,
-  // questions: React.PropTypes.array
+  hosts: React.PropTypes.array
 };
 
 export default Hosts;

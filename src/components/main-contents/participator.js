@@ -3,33 +3,23 @@ import './participator.css';
 
 class Participator extends Component {
   render() {
-    const subParts = this.props.subParts.map((part, index) => {
-      return (
-        <div
-          key={index}
-          className="sub-participator">
-          <div className="sub-image-wrap">
-            <img src={part.title.image} alt={part.title.alt} />
-          </div>
-          <p>{part.content}</p>
-        </div>
-      )
-    });
+    const content = this.props.contents.map((par, index) => (
+      <p
+        key={index}
+        className="paragraph">{par}</p>
+    ));
     return (
       <section className="participator">
         <h2>
           {this.props.title}
         </h2>
-        <div className="participator-content">
-          {subParts}
-        </div>
-        <div className="clear-float" />
+        {content}
       </section>
     );
   }
 }
 Participator.propTypes = {
   title: React.PropTypes.string,
-  subParts: React.PropTypes.array
+  content: React.PropTypes.array
 };
 export default Participator;

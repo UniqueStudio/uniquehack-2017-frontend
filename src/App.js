@@ -44,13 +44,9 @@ class App extends Component {
         name: '常见问题'
       },
       {
-        link: '#sponsor',
-        name: '赞助项目'
+        link: '#host',
+        name: '主办方'
       },
-      {
-        link: '#sponsor',
-        name: '联系我们'
-      }
     ];
     this.handleScroll = this.handleScroll.bind(this);
     this.haveScrollBy = this.haveScrollBy.bind(this);
@@ -71,11 +67,7 @@ class App extends Component {
   }
   haveScrollBy(selector, more=0) {
     const ele = document.querySelector(selector);
-    if (ele) {
-      return (ele.offsetTop - more) <= this.scrollTop;
-    } else {
-      return false;
-    }
+    return ele && ((ele.offsetTop - more) <= this.scrollTop);
   }
   findActiveTab() {
     return this.links.reduce((acc, value) => {
@@ -116,7 +108,8 @@ class App extends Component {
             });
           }}
           onScroll={(e) => {
-            this.scrollTop = e.target.scrollTop;
+            console.log(e)
+            this.scrollTop = e.target.scrollTop
             this.setState({
               activeTab: this.findActiveTab()
             });
@@ -127,6 +120,9 @@ class App extends Component {
             fullPower={!this.state.isMobile}
           />
           <MainContent />
+          <p className="footer">
+            Copyright © 2017 Unique Studio. All Rights Reserved.
+          </p>
         </div>
       </div>
     );

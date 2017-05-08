@@ -1,7 +1,15 @@
 import React, {Component} from 'react';
+import Menu from '../asserts/icon-menu.png';
+import Close from '../asserts/icon-close.png';
 import './nav.css';
 
 class Nav extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hidden: false
+    };
+  }
   render() {
     const links = this.props.links.map((link) => {
       return (
@@ -13,7 +21,7 @@ class Nav extends Component {
           onClick={() => {
             this.props.click(link.link)
           }}
-          className={"link-wrap link-" +
+          className={"link link-wrap link-" +
         (this.props.activeTab === link.link ?
           'active' : 'inactive')}>
           <a
@@ -25,9 +33,26 @@ class Nav extends Component {
     });
     return (
       <div
-        className={"nav " + (this.props.homepage ? 'without-bgc' : 'with-bgc')}
+        className={"nav "
+        + (this.props.homepage ? 'without-bgc' : 'with-bgc')
+        + (this.state.hidden ? ' nav-hidden' : ' nav-not-hidden')
+        }
       >
         <img className="logo" src={this.props.logo} />
+        <div
+          className="link-wrap nav-close"
+          onClick={() => {
+            const hiddenState = !this.state.hidden;
+            this.setState({
+              hidden: hiddenState
+            });
+          }}>
+            {this.state.hidden ?
+              <img src={Menu} alt="show"/>
+              :
+              <img src={Close} alt="close"/>
+            }
+        </div>
         <div className="links">
           {links}
         </div>

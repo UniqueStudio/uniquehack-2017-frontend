@@ -1,19 +1,13 @@
 import React, {Component} from 'react';
 
 import HackdayIntro from './main-contents/hackday-intro';
-import TalkIntro from './main-contents/talk-intro';
 import Participator from './main-contents/participator';
 import Schedule from './main-contents/schedule';
-import Detail from './main-contents/detail'
 import Map from './main-contents/map';
 import Prize from './main-contents/prize';
 import Questions from './main-contents/questions';
 import Hosts from './main-contents/hosts';
-import Sponsor from './main-contents/sponsor';
 import './main-content.css';
-
-import HackdayImage from '../asserts/hackday.png'
-import TalkImage from '../asserts/talk.png'
 
 class mainContent extends Component {
   render() {
@@ -27,42 +21,20 @@ class mainContent extends Component {
               '除此之外，在hackday举办的前夕，我们将举办”Unique Talk“前沿技术研讨会，邀请往届获奖队伍、代码大牛和大家共同交流分享。大家可以畅所欲言，和dalao面对面讨论，总结当前的技术与形式，交互新奇的想法，在会议最后选出代表展示自己的想法，分享自己的收获。',
             ]}
           url={{
-            link: '#',
-            name: '点击报名'
-          }}
-        />
-        <TalkIntro
-          title="uniquetalk 介绍"
-          contents={[
-            'Unique Talk与以往的交流会有所不同，并不是邀请各个公司的高层，也不是高不可攀的海归，而是就在大家身边熟悉的同学。摆脱了以往的陈词滥调，去除了所谓的官话套话，开门就见山，不拘泥于细节。',
-            '研讨会将分为多个分会场，每一个会场拥有独立的教室，拥有一个不同的主题，参与者可以根据自己的个人兴趣去参加其中一个或者多个，讨论持续两个小时，期间讨论的内容随意，最后选举出一名同学，总结谈论的内容，并在总会场中和大家分享讨论所得，其内容可以是开发心得、行业走向、科技前沿等。',
-          ]}
-          url={{
-            link: '#',
+            link: 'http://cn.mikecrm.com/hTp69AX',
             name: '点击报名'
           }}
         />
         <Participator
           title="参赛对象"
-          subParts={[
-            {
-              title: {
-                image: HackdayImage,
-                alt: 'Hackday'
-              },
-              content: 'Unique Hackday面向于全国高校本科生，其中包括编程爱好者、产品经理、交互设计师及任何有技术基础的同学，在所有的报名者中筛选出最优秀的150名参赛者来参加比赛。'
-            },
-            {
-              title: {
-                image: TalkImage,
-                alt: 'Talk'
-              },
-              content: '而Unique Talk 的报名，采取自愿参加的形式，面向有一定项目基础、创业经历的同学，除此之外还邀请全国各类高校技术组织，并在所有的报名者中筛选50名同学参加。'
-            }
+          contents={[
+            'Unique Hackday面向于全国高校本科生',
+            '其中包括编程爱好者、产品经理、交互设计师及任何有技术基础的同学',
+            '在所有的报名者中筛选出最优秀的150名参赛者来参加比赛。'
           ]}
         />
         <Schedule
-          title='参赛时间'
+          title='时间安排'
           schedules={[
             {
               time: '6月3日',
@@ -136,10 +108,6 @@ class mainContent extends Component {
             },
           ]}
         />
-        <Detail
-          title='详细规则'
-          content='我也不知道详细规则有些什么东西'
-        />
         <Map
           title='地址'
           description={{
@@ -152,31 +120,23 @@ class mainContent extends Component {
           prizes={[
             {
               name: '冠军',
-              content: '20,000 元'
+              content: '12,000 元'
             },
             {
               name: '亚军',
-              content: '10,000 元'
+              content: '7,500 元'
             },
             {
               name: '季军',
               content: '5,000 元'
             },
             {
-              name: '最佳',
-              content: '3,000 元'
+              name: '最佳技术奖、最佳创意奖、最佳设计奖',
+              content: '2,500 元'
             },
             {
-              name: '最佳',
-              content: '3,000 元'
-            },
-            {
-              name: '最佳',
-              content: '3,000 元'
-            },
-            {
-              name: '企业',
-              content: '由赞助企业设定'
+              name: '还有更多企业特设奖等你参与',
+              content: '~'
             }
           ]}
         />
@@ -184,61 +144,39 @@ class mainContent extends Component {
           title='常见问题'
           questions={[
             {
-              name: '这里是问题',
+              name: '我不在武汉，参与的交通费用怎么办？',
               content: [
-                'gugugugugugugugu',
-                'gugugugugugugugugugugu'
+                '对于不在武汉的选手，我们将按照选手所在地给予补助，持相应票据报销。免除后顾之忧！',
               ]
             },
             {
-              name: '这里是问题',
+              name: 'Hackday 可以提前组队吗？',
               content: [
-                'gugugugugugugugu',
-                'gugugugugugugugugugugu'
+                '可以，我们鼓励大家提前组队，一个队伍由2~5名同学组成，没有组队也不要紧，我们现场会组织没有队伍的同学参赛。',
               ]
             },
             {
-              name: '这里是问题',
+              name: '我需要带一些什么？',
               content: [
-                'gugugugugugugugu',
-                'gugugugugugugugugugugu'
+                '笔记本电脑，手机，充电器或者任何项目所需的设备。如果需要，你也可以携带枕头或者睡袋。请不要携带任何危险物品以防发生意外。'
               ]
             },
             {
-              name: '这里是问题',
+              name: '如果有更多问题，我该向哪里寻求帮助？',
               content: [
-                'gugugugugugugugu',
-                'gugugugugugugugugugugu'
-              ]
-            },
-            {
-              name: '这里是问题',
-              content: [
-                'gugugugugugugugu',
-                'gugugugugugugugugugugu'
-              ]
-            },
-            {
-              name: '这里是问题',
-              content: [
-                'gugugugugugugugu',
-                'gugugugugugugugugugugu'
-              ]
-            },
-            {
-              name: '这里是问题',
-              content: [
-                'gugugugugugugugu',
-                'gugugugugugugugugugugu'
+                '可以发送邮件到 xuzhiming@hustunique.com',
+                '或者加入我们的FAQ的qq群：636566271'
               ]
             },
           ]}
         />
         <Hosts
           title="主办方"
-        />
-        <Sponsor
-          title="赞助方"
+          hosts={[
+            '华中科技大学联创团队',
+            '华中科技大学创客空间',
+            '华中科技大学启明学院'
+          ]}
         />
       </div>
     );
