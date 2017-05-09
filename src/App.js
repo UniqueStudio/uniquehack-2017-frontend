@@ -86,16 +86,17 @@ class App extends Component {
           }}
           onWheel={(e) => {
             if (!this.haveScrollBy('#intro')) {
-              e.preventDefault();
               if (this.moving) {
                 return true;
-              }
-              if (e.deltaY > 0) {
-                document.querySelector('#intro').scrollIntoView({ behavior: 'smooth' });
               } else {
-                document.querySelector('#homepage').scrollIntoView({ behavior: 'smooth' });
+                e.preventDefault();
+                this.triggerMove();
+                if (e.deltaY > 0) {
+                  document.querySelector('#intro').scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  document.querySelector('#homepage').scrollIntoView({ behavior: 'smooth' });
+                }
               }
-              this.triggerMove();
             }
           }}
           onScroll={(e) => {
