@@ -63,10 +63,6 @@ class mainContent extends Component {
                   description: '晚餐'
                 },
                 {
-                  time: '17:30',
-                  description: '晚餐'
-                },
-                {
                   time: '23:00',
                   description: '夜宵'
                 },
