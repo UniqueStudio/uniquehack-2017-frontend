@@ -9,6 +9,7 @@
 }
 
 .hackday-intro a {
+  cursor: pointer;
   background-color: #f1f0f0;
   border-radius: 4px;
   border: 1px solid #3d3d3d;
