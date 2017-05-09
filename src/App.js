@@ -15,6 +15,7 @@ class App extends Component {
       homepage: true,
       activeTab: ''
     };
+    this.moving = false;
     this.links = [
       {
         link: '#intro',
@@ -39,6 +40,12 @@ class App extends Component {
     ];
     this.haveScrollBy = this.haveScrollBy.bind(this);
     this.findActiveTab = this.findActiveTab.bind(this);
+  }
+  triggerMove() {
+    this.moving = true;
+    setTimeout(() => {
+      this.moving = false;
+    }, 400);
   }
   componentWillMount() {
     if (this.haveScrollBy('#intro', 200)) {
@@ -80,11 +87,15 @@ class App extends Component {
           onWheel={(e) => {
             if (!this.haveScrollBy('#intro')) {
               e.preventDefault();
+              if (this.moving) {
+                return true;
+              }
               if (e.deltaY > 0) {
                 document.querySelector('#intro').scrollIntoView({ behavior: 'smooth' });
               } else {
                 document.querySelector('#homepage').scrollIntoView({ behavior: 'smooth' });
               }
+              this.triggerMove();
             }
           }}
           onScroll={(e) => {
