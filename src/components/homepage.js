@@ -6,6 +6,7 @@ class Homepage extends Component {
   render() {
     return (
       <div
+        id="homepage"
         className={"homepage " + (this.props.hidden ? 'hidden' : 'shown')}
       >
         {this.props.hidden}

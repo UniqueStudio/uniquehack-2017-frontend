@@ -4,8 +4,6 @@ import 'p5/lib/addons/p5.dom'
 
 const sketch = function(p) {
   let canvas;
-  let x = 100;
-  const y = 100;
   const caseFunctions = ['toUpperCase', 'toUpperCase', 'toUpperCase', 'toUpperCase', 'toUpperCase', 'toLowerCase'];
   const leetReplacement = {
     A: [ 4, '@' ],
@@ -75,11 +73,11 @@ const sketch = function(p) {
     p.textSize(textSize);
     // console.log(txt)
     let h = p.textSize();
-    let w = p.textWidth(txt);
+    // let w = p.textWidth(txt);
 
     let count = 7;
     let part = h / count;
-    let xOffset = 0;
+    // let xOffset = 0;
     let yOffset = p.height / 2 - h / 2;
 
     p.blendMode(p.ADD);
@@ -117,31 +115,6 @@ const sketch = function(p) {
       canvas.drawingContext.restore();
     }
 
-    // p.fill(255, 2);
-    // for(let i = 0; i < 4; i++) {
-    //   p.rect(0, (p.frameCount * (30 + i)) % p.height / 6 * 7, p.width, p.height / 9);
-    // }
-    // p.fill(255, p.random(8, 12));
-    // let rounding = (part * 1.2);
-    // let travelingBarHeight = p.height / 6;
-    // let travelingBarSpeed = p.frameCount * 2;
-    // p.rect(
-    //   0, p.round(travelingBarSpeed % travelingBarHeight * 8 / rounding) * rounding - travelingBarHeight,
-    //   p.width, travelingBarHeight
-    // );
-    // let travelingBarY2 = p.round(
-    //     (travelingBarSpeed + 6) % travelingBarHeight * 8 / rounding
-    //   ) * rounding - travelingBarHeight;
-    // let travelingBar2Opacity = p.map(
-    //   travelingBarY2,
-    //   ...(travelingBarY2 < p.height / 2 ? [ 0, p.height / 2 ] : [ p.height / 2, p.height ]),
-    //   0, 1
-    // );
-    // p.fill(255, p.random(8, 12) * travelingBar2Opacity);
-    // p.rect(
-    //   0, travelingBarY2,
-    //   p.width, travelingBarHeight
-    // );
   };
   p.windowResized = () => {
     p.resizeCanvas(window.innerWidth, window.innerHeight);

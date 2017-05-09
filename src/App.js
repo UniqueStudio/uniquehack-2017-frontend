@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.jpg';
+import logo from './logo.png';
 import Nav from './components/nav';
 import Homepage from './components/homepage';
 import MainContent from './components/main-content';
@@ -62,7 +62,7 @@ class App extends Component {
       this.setState({
         homepage: true,
       });
-      document.querySelector('.homepage').scrollIntoView({ behavior: 'smooth' });
+      document.querySelector('#homepage').scrollIntoView({ behavior: 'smooth' });
     }
   }
   haveScrollBy(selector, more=0) {

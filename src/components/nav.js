@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import Menu from '../asserts/icon-menu.png';
-import Close from '../asserts/icon-close.png';
 import './nav.css';
 
 class Nav extends Component {
@@ -39,7 +37,7 @@ class Nav extends Component {
         + (this.state.hidden ? ' nav-hidden' : ' nav-not-hidden')
         }
       >
-        <img className="logo" src={this.props.logo} />
+        <img className="logo" src={this.props.logo} alt="logo"/>
         <div
           className="link-wrap nav-close"
           onTouchEnd={() => {

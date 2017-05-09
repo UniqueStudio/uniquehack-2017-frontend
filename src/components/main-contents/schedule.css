@@ -29,6 +29,10 @@
   box-sizing: border-box;
 
 }
+.schedule-time p {
+  position: relative;
+  z-index: 7;
+}
 .schedule-time:before, .schedule-time:after {
   top: 0;
   left: 0;
