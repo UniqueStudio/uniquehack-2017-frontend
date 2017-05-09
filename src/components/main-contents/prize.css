@@ -2,25 +2,43 @@
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+  box-sizing: border-box;
   height: 600px;
   overflow: hidden;
   position: relative;
 }
 .prize-left {
   position: absolute;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, .85);
+  bottom: 2em;
+  padding: 1em;
+  /*background-color: rgba(0, 0, 0, .85);*/
   width: 100%;
-  height: 2000px;
-  transform-origin: 100% 2000px;
-  transform: translate(-60%, 0) rotate(-25deg);
+  height: auto;
+  /*transform-origin: 100% 2000px;*/
+  /*transform: translate(-100%, 0) rotate(-90deg);*/
   /*transform: translate(-50%, 0);*/
 }
 .prize-left .single-prize {
   /*transform: translate(-100%, 0) rotate(60deg);*/
   height: 5em;
-  transform-origin: 4em 0;
-  transform: translate(105%, 1500px) rotate(25deg);
+  /*transform-origin: 4em 0;*/
+  /*transform: translate(105%, 1600px) rotate(90deg);*/
+}
+@media screen and (min-width: 740px) {
+  .prize-left {
+    padding: 0;
+    height: 2000px;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .85);
+    transform-origin: 100% 2000px;
+    transform: translate(-60%, 0) rotate(-25deg);
+  }
+  .prize-left .single-prize {
+    /*transform: translate(-100%, 0) rotate(60deg);*/
+    height: 5em;
+    transform-origin: 4em 0;
+    transform: translate(105%, 1600px) rotate(25deg);
+  }
 }
 .prize-slider-box {
   background-color: #32cdff;

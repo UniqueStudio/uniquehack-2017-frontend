@@ -8,7 +8,11 @@
   transition: all .2s;
 }
 .logo {
-  display: inline-block;
+  height: 40px;
+  width: auto;
+  margin-top: 11px;
+  margin-left: 11px;
+  display: block;
   float: left;
 }
 .with-bgc {
@@ -74,10 +78,10 @@
   }
 }
 
-.nav .logo {
-  width: 62px;
-}
 .nav-hidden .link {
+  height: 0;
+}
+.nav-hidden .logo {
   height: 0;
 }
 .nav-hidden {

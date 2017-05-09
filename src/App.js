@@ -48,21 +48,14 @@ class App extends Component {
         name: '主办方'
       },
     ];
-    this.handleScroll = this.handleScroll.bind(this);
     this.haveScrollBy = this.haveScrollBy.bind(this);
     this.findActiveTab = this.findActiveTab.bind(this);
   }
-  handleScroll(deltaY) {
-    if (deltaY > 0 && this.state.homepage) {
+  componentWillMount() {
+    if (this.haveScrollBy('#intro', 200)) {
       this.setState({
-        homepage: false,
+        homepage: false
       });
-      document.querySelector('#intro').scrollIntoView({ behavior: 'smooth' });
-    } else if (deltaY < 0 && !this.state.homepage) {
-      this.setState({
-        homepage: true,
-      });
-      document.querySelector('#homepage').scrollIntoView({ behavior: 'smooth' });
     }
   }
   haveScrollBy(selector, more=0) {
@@ -98,7 +91,11 @@ class App extends Component {
           onWheel={(e) => {
             if (!this.haveScrollBy('#intro')) {
               e.preventDefault();
-              this.handleScroll(e.deltaY);
+              if (e.deltaY > 0) {
+                document.querySelector('#intro').scrollIntoView({ behavior: 'smooth' });
+              } else {
+                document.querySelector('#homepage').scrollIntoView({ behavior: 'smooth' });
+              }
             }
           }}
           onTouchMove={(e) => {
@@ -109,6 +106,16 @@ class App extends Component {
           }}
           onScroll={(e) => {
             this.scrollTop = e.target.scrollTop;
+            const haveScrollByIntro = this.haveScrollBy('#intro', 100);
+            if (haveScrollByIntro && this.state.homepage) {
+              this.setState({
+                homepage: false
+              });
+            } else if (!haveScrollByIntro && !this.state.homepage) {
+              this.setState({
+                homepage: true
+              });
+            }
             this.setState({
               activeTab: this.findActiveTab()
             });
