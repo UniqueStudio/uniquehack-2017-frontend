@@ -8,6 +8,12 @@ import Prize from './main-contents/prize';
 import Questions from './main-contents/questions';
 import Hosts from './main-contents/hosts';
 import './main-content.css';
+import Sponsor from "./main-contents/sponsor";
+
+import SponsorChangan from '../asserts/sponsor-changan.png';
+import SponsorKika from '../asserts/sponsor-kika.png';
+import SponsorTencent0 from '../asserts/sponsor-tencent-0.png';
+import SponsorTencent1 from '../asserts/sponsor-tencent-1.png';
 
 class mainContent extends Component {
   render() {
@@ -171,6 +177,31 @@ class mainContent extends Component {
             '华中科技大学联创团队',
             '华中科技大学创客空间',
             '华中科技大学启明学院'
+          ]}
+        />
+        <Sponsor
+          title="赞助方"
+          sponsors={[
+            {
+              name: '长安私人资本',
+              imageSrc: SponsorChangan,
+              url: 'http://www.changancap.com/'
+            },
+            {
+              name: 'kika',
+              imageSrc: SponsorKika,
+              url: 'http://www.kikatech.com/'
+            },
+            {
+              name: '腾讯创新大赛',
+              imageSrc: SponsorTencent0,
+              url: 'http://nextidea.qq.com/'
+            },
+            {
+              name: '腾讯游戏学院',
+              imageSrc: SponsorTencent1,
+              url: '#'
+            },
           ]}
         />
       </div>

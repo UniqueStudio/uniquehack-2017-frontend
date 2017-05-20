@@ -1,0 +1,33 @@
+.sponsor {
+  background-color: #faf9f9;
+}
+.sponsor-content-images {
+  margin: 3pc auto 30px;
+  max-width: 60pc;
+}
+
+.sponsor-img {
+  display: block;
+  height: 70px;
+  margin: 40px 20px;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.sponsor-img-wrap {
+  display: inline-block;
+  width: 25%;
+}
+@media (max-width: 640px) {
+  .sponsor-img {
+    height: 30px;
+  }
+  .sponsor-img-wrap {
+    display: inline-block;
+    width: 50%;
+  }
+  .sponsor-content-images {
+    margin: 3pc auto 20px;
+  }
+}
