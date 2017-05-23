@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './prize.css';
-import PrizeBg from '../../asserts/prize-bg.png'
 
 class Prize extends Component {
   render() {
@@ -11,7 +10,7 @@ class Prize extends Component {
       </div>
     ));
     const bgStyle = {
-      background: 'url(' + PrizeBg + ')'
+      background: 'url(http://hackday-1251917016.costj.myqcloud.com/asserts/prize-bg.png)'
     };
     return (
       <section

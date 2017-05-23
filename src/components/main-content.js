@@ -10,10 +10,12 @@ import Hosts from './main-contents/hosts';
 import './main-content.css';
 import Sponsor from "./main-contents/sponsor";
 
-import SponsorChangan from '../asserts/sponsor-changan.png';
-import SponsorKika from '../asserts/sponsor-kika.png';
-import SponsorTencent0 from '../asserts/sponsor-tencent-0.png';
-import SponsorTencent1 from '../asserts/sponsor-tencent-1.png';
+// import SponsorChangan from '../asserts/sponsor-changan.png';
+// import SponsorKika from '../asserts/sponsor-kika.png';
+// import SponsorTencent0 from '../asserts/sponsor-tencent-0.png';
+// import SponsorTencent1 from '../asserts/sponsor-tencent-1.png';
+// import SponsorAli0 from '../asserts/sponsor-ali-0.png';
+// import SponsorAli1 from '../asserts/sponsor-ali-1.png';
 
 class mainContent extends Component {
   render() {
@@ -184,23 +186,33 @@ class mainContent extends Component {
           sponsors={[
             {
               name: '长安私人资本',
-              imageSrc: SponsorChangan,
+              imageSrc: 'http://hackday-1251917016.costj.myqcloud.com/asserts/sponsor-changan.png',
               url: 'http://www.changancap.com/'
             },
             {
               name: 'kika',
-              imageSrc: SponsorKika,
+              imageSrc: 'http://hackday-1251917016.costj.myqcloud.com/asserts/sponsor-changan.png',
               url: 'http://www.kikatech.com/'
             },
             {
               name: '腾讯创新大赛',
-              imageSrc: SponsorTencent0,
+              imageSrc: 'http://hackday-1251917016.costj.myqcloud.com/asserts/sponsor-tencent-0.png',
               url: 'http://nextidea.qq.com/'
             },
             {
               name: '腾讯游戏学院',
-              imageSrc: SponsorTencent1,
+              imageSrc: 'http://hackday-1251917016.costj.myqcloud.com/asserts/sponsor-tencent-1.png',
               url: '#'
+            },
+            {
+              name: '阿里天池',
+              imageSrc: 'http://hackday-1251917016.costj.myqcloud.com/asserts/sponsor-ali-0.png',
+              url: 'https://tianchi.aliyun.com/'
+            },
+            {
+              name: '阿里云',
+              imageSrc: 'http://hackday-1251917016.costj.myqcloud.com/asserts/sponsor-ali-1.png',
+              url: 'https://cn.aliyun.com/'
             },
           ]}
         />
